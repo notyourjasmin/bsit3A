@@ -1,5 +1,5 @@
 // ---- Subject color tokens (pastel) ----
-// Each subject gets a consistent pastel identity used across schedule + todos.
+// Each subject gets a consistent pastel identity used across the site.
 const SUBJECTS = {
   "IT 302": { name: "Systems Integration and Architecture", short: "Sys. Integration & Architecture", color: "blue" },
   "IT 304D": { name: "Specialization 1 — DBA", short: "Specialization 1 (DBA)", color: "mint" },
@@ -10,7 +10,31 @@ const SUBJECTS = {
   "IT 305D": { name: "Specialization 2 — DBA", short: "Specialization 2 (DBA)", color: "teal" },
 };
 
-// ---- Pending tasks / to-dos, grouped by subject code ----
+// ---- Next class day per subject, per batch ----
+// Used to show "next up: Tue, Aug 25" style dates on each subject card.
+// Pick the earliest day in the week that subject meets (on-site or online).
+const NEXT_CLASS_DAY = {
+  batch1: {
+    "IT 302": "Tuesday",
+    "IT 304D": "Tuesday",
+    "SSP 101d": "Tuesday",
+    "IT 303": "Wednesday",
+    "IT 306D": "Friday",
+    "CC 107": "Friday",
+    "IT 305D": "Saturday",
+  },
+  batch2: {
+    "IT 304D": "Tuesday",
+    "IT 305D": "Tuesday",
+    "SSP 101d": "Tuesday",
+    "IT 302": "Wednesday",
+    "IT 303": "Wednesday",
+    "CC 107": "Friday",
+    "IT 306D": "Friday",
+  },
+};
+
+// ---- Pending tasks, grouped by subject code ----
 const TODOS = {
   batch1: {
     "IT 302": ["Discussion for Week 8 topic"],
@@ -63,5 +87,22 @@ const TODOS = {
   },
 };
 
-// Replace this with your section's actual Google Drive folder link.
-const GDRIVE_LINK = "https://drive.google.com/drive/folders/YOUR-FOLDER-ID-HERE";
+// ---- Future events, grouped by subject code ----
+// Same list for both batches for now — tell me if a batch needs a different one.
+const FUTURE_EVENTS = {
+  batch1: {
+    "IT 303": ["Whole system output", "Documentation (Business Case)"],
+    "IT 305D": ["Final project (topics are already given per group)"],
+  },
+  batch2: {
+    "IT 303": ["Whole system output", "Documentation (Business Case)"],
+    "IT 305D": ["Final project (topics are already given per group)"],
+  },
+};
+
+// ---- Section Google Drive links ----
+const DRIVE_LINKS = [
+  { label: "Lesson Materials", url: "https://drive.google.com/drive/folders/1jP0lXF2VFMdICWY39sRGNjN7FVVz2toG" },
+  { label: "SAD (Ma'am Joann)", url: "https://drive.google.com/drive/folders/15SUDDx0OkzEFynFTOh8pPAHmvV56b8j-" },
+  { label: "AD&ET (Ma'am Tina)", url: "https://drive.google.com/drive/folders/1faE_6su5nBQaF51n5W6iEtbWxnh6hcrS" },
+];
