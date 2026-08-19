@@ -14,7 +14,7 @@ const SUBJECTS = {
 const TODOS = {
   batch1: {
     "IT 302": ["Discussion for Week 8 topic"],
-    "IT 304D": ["ANOVA laboratory activity", "Decision tree laboratory activity"],
+    "IT 304D": ["ANOVA laboratory activity", "Decision tree laboratory activity", "Practice the activity uploaded on Google Classroom"],
     "SSP 101d": [
       "Assignment: Billionaires (yellow pad)",
       "Assignment: Lesson 3 (yellow pad)",
@@ -25,11 +25,11 @@ const TODOS = {
     "IT 303": [
       "Quiz 2 — Unit 2 Systems Planning: Lesson 1 & 2",
       "Quiz 3 — Unit 2 Systems Planning: Lesson 3",
-      "Submit hard copy: draft Gantt chart and CBA (per group)",
+      "Submission of hard copies of the draft Gantt Chart and Cost-Benefit Analysis (per group)",
     ],
     "IT 306D": ["Take-home activity", "Quiz", "Laboratory activity"],
     "CC 107": [
-      "Quiz — covers all group reports",
+      "Quiz covering all group reports",
       "Take-home activity 2 (printed)",
       "Take-home activity 3 (printed)",
     ],
@@ -40,7 +40,7 @@ const TODOS = {
     ],
   },
   batch2: {
-    "IT 304D": ["ANOVA laboratory activity", "Decision tree laboratory activity"],
+    "IT 304D": ["ANOVA laboratory activity", "Decision tree laboratory activity", "Practice the activity uploaded on Google Classroom"],
     "SSP 101d": [
       "Assignment: Billionaires (yellow pad)",
       "Assignment: Lesson 3 (yellow pad)",
@@ -51,11 +51,11 @@ const TODOS = {
     "IT 303": [
       "Quiz 2 — Unit 2 Systems Planning: Lesson 1 & 2",
       "Quiz 3 — Unit 2 Systems Planning: Lesson 3",
-      "Submit hard copy: draft Gantt chart and CBA (per group)",
+      "Submission of hard copies of the draft Gantt Chart and Cost-Benefit Analysis (per group)",
     ],
     "IT 306D": ["Take-home activity", "Quiz", "Laboratory activity"],
     "CC 107": [
-      "Quiz — covers all group reports",
+      "Quiz covering all group reports",
       "Take-home activity 2 (printed)",
       "Take-home activity 3 (printed)",
     ],
