@@ -144,7 +144,7 @@
     }
 
     codes.forEach((code) => {
-      futureGridEl.appendChild(buildSubjectCard(code, events[code], true));
+      futureGridEl.appendChild(buildSubjectCard(code, events[code], false));
     });
   }
 })();
