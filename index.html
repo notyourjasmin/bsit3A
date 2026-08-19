@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSIT 3A — Academic Calendar</title>
+<title>BSIT 3A — Section Agenda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -17,7 +17,7 @@
   <div class="welcome-wrap">
     <p class="eyebrow">BSIT 3A · Academic Calendar</p>
     <h1 class="hero-title">One section,<br>two schedules.</h1>
-    <p class="hero-sub">We split into two batches for our other subjects. Pick yours to see this week's classes and what's due.</p>
+    <p class="hero-sub">We split into two batches for our other subjects. Pick yours to see what's due and what's coming up.</p>
 
     <div class="batch-picker">
       <button class="batch-card batch-card--1" data-batch="batch1">
@@ -34,10 +34,13 @@
       </button>
     </div>
 
-    <a id="gdrive-link-welcome" class="gdrive-pill" href="#" target="_blank" rel="noopener">
-      <span class="gdrive-dot" aria-hidden="true"></span>
-      Section Google Drive
-    </a>
+    <div class="drive-dropdown" id="drive-dropdown-welcome">
+      <button class="gdrive-pill" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="gdrive-dot" aria-hidden="true"></span>
+        Section Google Drive
+      </button>
+      <div class="drive-menu" role="menu"></div>
+    </div>
   </div>
 </section>
 
@@ -51,14 +54,29 @@
       <p class="eyebrow" id="dash-eyebrow">Batch 1</p>
       <h2 id="dash-title">BSIT 3A1</h2>
     </div>
-    <a id="gdrive-link-dash" class="gdrive-pill gdrive-pill--small" href="#" target="_blank" rel="noopener">
-      <span class="gdrive-dot" aria-hidden="true"></span>
-      Drive
-    </a>
+    <div class="drive-dropdown" id="drive-dropdown-dash">
+      <button class="gdrive-pill gdrive-pill--small" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="gdrive-dot" aria-hidden="true"></span>
+        Drive
+      </button>
+      <div class="drive-menu" role="menu"></div>
+    </div>
   </header>
 
-  <p class="section-note">Everything below starts <strong>next week</strong>, grouped by subject.</p>
-  <div id="todo-grid" class="todo-grid"></div>
+  <nav class="tabs" role="tablist" aria-label="View">
+    <button class="tab active" data-view="todos" role="tab" aria-selected="true">Pending Tasks</button>
+    <button class="tab" data-view="future" role="tab" aria-selected="false">Future Events</button>
+  </nav>
+
+  <div id="view-todos" class="view active">
+    <p class="section-note">Everything below starts <strong>next week</strong>.</p>
+    <div id="todo-grid" class="todo-grid"></div>
+  </div>
+
+  <div id="view-future" class="view">
+    <p class="section-note">Bigger stuff on the horizon — no fixed date yet, but plan ahead.</p>
+    <div id="future-grid" class="todo-grid"></div>
+  </div>
 </section>
 
 <script src="data.js"></script>
