@@ -26,7 +26,6 @@ const TODOS = {
       "Quiz 2 — Unit 2 Systems Planning: Lesson 1 & 2",
       "Quiz 3 — Unit 2 Systems Planning: Lesson 3",
       "Submit hard copy: draft Gantt chart and CBA (per group)",
-      "gawin yung activity na sinend sa google classroom",
     ],
     "IT 306D": ["Take-home activity", "Quiz", "Laboratory activity"],
     "CC 107": [
