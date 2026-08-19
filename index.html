@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSIT 3A — Academic Calendar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- WELCOME SCREEN -->
+<section id="welcome" class="screen active">
+  <div class="welcome-wrap">
+    <p class="eyebrow">BSIT 3A · Academic Calendar</p>
+    <h1 class="hero-title">One section,<br>two schedules.</h1>
+    <p class="hero-sub">We split into two batches for our other subjects. Pick yours to see this week's classes and what's due.</p>
+
+    <div class="batch-picker">
+      <button class="batch-card batch-card--1" data-batch="batch1">
+        <span class="batch-tag">Batch 1</span>
+        <span class="batch-name">BSIT 3A1</span>
+        <span class="batch-desc">Tue–Sat class block</span>
+        <span class="batch-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="batch-card batch-card--2" data-batch="batch2">
+        <span class="batch-tag">Batch 2</span>
+        <span class="batch-name">BSIT 3A2</span>
+        <span class="batch-desc">Tue–Sat class block</span>
+        <span class="batch-arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    <a id="gdrive-link-welcome" class="gdrive-pill" href="#" target="_blank" rel="noopener">
+      <span class="gdrive-dot" aria-hidden="true"></span>
+      Section Google Drive
+    </a>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="screen">
+  <header class="dash-header">
+    <button id="back-btn" class="back-btn" aria-label="Switch batch">
+      <span aria-hidden="true">←</span> Switch batch
+    </button>
+    <div class="dash-heading">
+      <p class="eyebrow" id="dash-eyebrow">Batch 1</p>
+      <h2 id="dash-title">BSIT 3A1</h2>
+    </div>
+    <a id="gdrive-link-dash" class="gdrive-pill gdrive-pill--small" href="#" target="_blank" rel="noopener">
+      <span class="gdrive-dot" aria-hidden="true"></span>
+      Drive
+    </a>
+  </header>
+
+  <p class="section-note">Everything below starts <strong>next week</strong>, grouped by subject.</p>
+  <div id="todo-grid" class="todo-grid"></div>
+</section>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
